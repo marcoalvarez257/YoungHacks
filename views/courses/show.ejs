@@ -1,0 +1,56 @@
+<% include ../partials/header_2 %>
+
+<div class="container">
+    <div class="row justify-content-md-center my-4">
+        <div class="col-lg-9">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="/displayImage/<%= course.imagePath %>" alt="">
+                <div class="card-body">
+                    <h3 class="card-title"><%= course.name %></h3>
+                    <h4 class="card-subtitle mb-2 text-muted">By: <%= course.author %></h4>
+                    <p class="card-text">
+                        <%= course.description %>
+                    </p>
+                    <h6 class="mb-2 text-muted">Difficulty: <%= course.difficulty %></h6>
+                    <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span> 4.0 stars
+                </div>
+            </div>
+
+
+            <div class="card card-outline-secondary my-4">
+                <div class="card-header">
+                    Product Reviews
+                </div>
+                <div class="card-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore,
+                        similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                        Sequi mollitia, necessitatibus quae sint
+                        natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore,
+                        similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                        Sequi mollitia, necessitatibus quae sint
+                        natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore,
+                        similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum.
+                        Sequi mollitia, necessitatibus quae sint
+                        natus.</p>
+                    <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                    <hr>
+                </div>
+            </div>
+
+            <form action="/home/addLearning/<%= currentUser._id %>/<%= course._id %>?_method=PUT" method="POST">
+                <small>
+                    <button class="btn btn-primary float-right">
+                        Add to Learning
+                    </button>
+                </small>
+            </form>
+        </div>
+    </div>
+</div>
+<% include ../partials/footer_2 %>
