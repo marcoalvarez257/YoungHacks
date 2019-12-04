@@ -54,7 +54,7 @@
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">
                                 <a href="/home/courses/<%= course._id %>">
-                                    <img class="card-img-top" src="/displayImage/<%= course.imagePath %>" alt=""></a>
+                                    <img class="card-img-top img-thumbnail img-fluid" src="/displayImage/<%= course.imagePath %>" alt=""></a>
                                 <div class="card-body">
                                     <h4 class="card-title">
                                         <a href="/home/courses/<%= course._id %>"><%= course.name %></a>
@@ -86,9 +86,9 @@
                 <!-- Web Development Tab -->
                 <div class="tab-pane fade" id="web_tab">
 
-                    <div class="col-lg-9">
-                            <img src="/image/web_dev.jpeg" class="d-block w-100" alt="Image">
-                    </div>
+                        <div class="carousel-inner">
+                                <img src="/image/web_dev.jpeg" class="img-fluid" alt="Image">
+                        </div>
 
                     <div class="row my-3">
                         <% courses.forEach(function(course){ %>
@@ -128,8 +128,8 @@
                 <!-- Mobile Application Tab -->
                 <div class="tab-pane fade" id="mobile_tab">
 
-                        <div class="col-lg-9">
-                                <img src="/image/app_dev.jpg" class="d-block w-100" alt="Image">
+                        <div class="carousel-inner">
+                                <img src="/image/app_dev.jpg" class="img-fluid" alt="Image">
                         </div>
 
                     <div class="row my-3">
@@ -171,8 +171,8 @@
                 <!-- Game Developement Tab -->
                 <div class="tab-pane fade" id="game_tab">
 
-                        <div class="col-lg-9">
-                                <img src="/image/game_dev.png" class="d-block w-100" alt="Image">
+                        <div class="carousel-inner">
+                                <img src="/image/game_dev.png" class="img-fluid" alt="Image">
                         </div>
 
                     <div class="row my-3">
@@ -214,8 +214,8 @@
                 <!-- Databases Tab -->
                 <div class="tab-pane fade" id="database_tab">
 
-                        <div class="col-lg-9">
-                                <img src="/image/db.png" class="d-block w-100" alt="Image">
+                        <div class="carousel-inner">
+                                <img src="/image/db.png" class="img-fluid" alt="Image">
                         </div>
 
                     <div class="row my-3">
