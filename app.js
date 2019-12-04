@@ -70,5 +70,5 @@ app.use(profileRoute);
 
 
 app.listen(process.env.PORT || 3000, process.env.IP, function(req, res) {
-    console.log("Young Hacks server has started.");
+    console.log("YoungHacks server has started.");
 });
