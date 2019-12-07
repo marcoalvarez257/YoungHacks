@@ -25,4 +25,9 @@ router.get("/home/courses/:id", middleware.isLoggedIn, function(req, res) {
     });
 });
 
+// SHOW Video Route
+router.get("/home/courses/:id/playVideo", function(req, res){
+    res.render("./courses/video");
+});
+
 module.exports = router;

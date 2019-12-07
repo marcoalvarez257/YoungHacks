@@ -25,6 +25,7 @@ router.get("/home/my_learning/:userID", middleware.isLoggedIn ,function(req, res
     });
 });
 
+
 // UPDATE User Learning Route
 router.put("/home/addLearning/:userID/:courseID", middleware.isLoggedIn ,function(req, res){
     User.findById(req.params.userID, function(err, foundUser){

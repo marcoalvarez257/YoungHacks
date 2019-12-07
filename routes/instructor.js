@@ -8,7 +8,7 @@ mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 var uri = "mongodb://localhost/young_hack";
-var conn = mongoose.createConnection(uri);
+var conn = mongoose.createConnection(uri, { useNewUrlParser: true });
 
 var crypto = require("crypto"),
 multer = require("multer"),
@@ -49,6 +49,7 @@ var storage = new GridFsStorage({
 // =====================
 // INDEX Page route
 router.get("/instructor", function(req, res){
+    console.log(gfs.files);
     gfs.files.find().toArray((err, files) => {
         //Check Files
         res.render("admin", {files: files});
